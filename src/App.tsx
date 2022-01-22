@@ -45,12 +45,21 @@ function App() {
     height:"30px" 
   }
 
+  const parrentClicked = (event: any) => {
+    if(event.target.id === "input") return;
+    document.getElementById("input")?.blur();
+  }
+
+  const inputClicked = (e: Event) => {
+    e.preventDefault();
+  }
+
   return <TransformWrapper panning={{excluded: ["exclude"]}} minScale={1} maxScale={1} zoomAnimation={{disabled: true}} >
         <TransformComponent wrapperStyle={wrapper} contentStyle={content}>
-            <div style={parrent}>
+            <div style={parrent} onClick={(event: any) => parrentClicked(event)}>
               <div style={redBox}></div>
               <div style={yellowBox}></div>
-              <input type="text" className="exclude" style={input}/>
+              <input id="input" type="text" className="exclude" style={input}/>
             </div>
         </TransformComponent>
     </TransformWrapper>
