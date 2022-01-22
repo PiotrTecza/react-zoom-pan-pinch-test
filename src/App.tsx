@@ -50,10 +50,6 @@ function App() {
     document.getElementById("input")?.blur();
   }
 
-  const inputClicked = (e: Event) => {
-    e.preventDefault();
-  }
-
   return <TransformWrapper panning={{excluded: ["exclude"]}} minScale={1} maxScale={1} zoomAnimation={{disabled: true}} >
         <TransformComponent wrapperStyle={wrapper} contentStyle={content}>
             <div style={parrent} onClick={(event: any) => parrentClicked(event)}>
