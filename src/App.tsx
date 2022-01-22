@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import './App.css';
-import {TransformWrapper, TransformComponent, ReactZoomPanPinchRef} from "react-zoom-pan-pinch";
+import {TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 
 function App() {
   const wrapper: CSSProperties = {
