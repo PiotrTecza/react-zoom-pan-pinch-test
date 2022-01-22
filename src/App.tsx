@@ -38,22 +38,23 @@ function App() {
   }
 
   const input: CSSProperties = {
-    position: "fixed", 
-    bottom:"0",
-    width:"100%",
+    position: "absolute", 
+    top:"800px",
+    left:"200px",
+    width:"200px",
     height:"30px" 
   }
 
   return <div>
-    <TransformWrapper minScale={1} maxScale={1} zoomAnimation={{disabled: true}} >
+    <TransformWrapper panning={{excluded: ["exclude"]}} minScale={1} maxScale={1} zoomAnimation={{disabled: true}} >
         <TransformComponent wrapperStyle={wrapper} contentStyle={content}>
             <div style={parrent}>
               <div style={redBox}></div>
               <div style={yellowBox}></div>
+              <input type="text" className="exclude" style={input}/>
             </div>
         </TransformComponent>
     </TransformWrapper>
-    <input type="text" style={input}/>
   </div>
 
 }
