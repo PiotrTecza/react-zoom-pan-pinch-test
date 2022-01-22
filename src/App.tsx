@@ -15,8 +15,8 @@ function App() {
   }
 
   const parrent: CSSProperties = {
-      height: "2000px",
-      width: "2000px",
+      height: "5000px",
+      width: "5000px",
       position: "relative",
       overflow: "hidden",
       backgroundColor: "blue",
@@ -39,14 +39,13 @@ function App() {
 
   const input: CSSProperties = {
     position: "absolute", 
-    top:"800px",
+    top:"700px",
     left:"200px",
     width:"200px",
     height:"30px" 
   }
 
-  return <div>
-    <TransformWrapper panning={{excluded: ["exclude"]}} minScale={1} maxScale={1} zoomAnimation={{disabled: true}} >
+  return <TransformWrapper panning={{excluded: ["exclude"]}} minScale={1} maxScale={1} zoomAnimation={{disabled: true}} >
         <TransformComponent wrapperStyle={wrapper} contentStyle={content}>
             <div style={parrent}>
               <div style={redBox}></div>
@@ -55,7 +54,6 @@ function App() {
             </div>
         </TransformComponent>
     </TransformWrapper>
-  </div>
 
 }
 
